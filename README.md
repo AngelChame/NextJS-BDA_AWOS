@@ -52,8 +52,6 @@ Consulta: EXPLAIN ANALYZE SELECT * FROM students WHERE email = 'maria@test.com';
 
 Resultado: Index Scan using idx_students_email_unique on students (cost=0.14..8.16 rows=1 width=132).
 
-📁 Estructura del Repositorio
-Plaintext
 ├── backend/
 │   └── db/
 │       ├── schema.sql    # Definición de tablas y relaciones
@@ -66,6 +64,8 @@ Plaintext
 │   ├── lib/db.ts         # Pool de conexión segura
 │   └── Dockerfile        # Imagen de Next.js
 └── docker-compose.yml    # Orquestación de servicios
+
+
 Desarrollado por: Ángel Chamé
 
 Matrícula: 243770
