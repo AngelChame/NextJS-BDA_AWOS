@@ -52,19 +52,6 @@ Consulta: EXPLAIN ANALYZE SELECT * FROM students WHERE email = 'maria@test.com';
 
 Resultado: Index Scan using idx_students_email_unique on students (cost=0.14..8.16 rows=1 width=132).
 
-├── backend/
-│   └── db/
-│       ├── schema.sql    # Definición de tablas y relaciones
-│       ├── seed.sql      # Carga de 30+ registros para pruebas
-│       ├── views.sql     # Lógica de las 5 vistas obligatorias
-│       ├── indexes.sql   # Optimización B-Tree
-│       └── roles.sql     # Configuración de privilegios de app_user
-├── frontend/
-│   ├── app/              # Dashboard y Reportes Dinámicos
-│   ├── lib/db.ts         # Pool de conexión segura
-│   └── Dockerfile        # Imagen de Next.js
-└── docker-compose.yml    # Orquestación de servicios
-
 
 Desarrollado por: Ángel Chamé
 
