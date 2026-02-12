@@ -1,13 +1,8 @@
 import Link from 'next/link';
+import { getSystemReports } from '@/lib/services/reports';
 
-export default function Home() {
-  const reports = [
-    { id: 1, name: 'Desempeño de Cursos', view: 'vw_course_performance' },
-    { id: 2, name: 'Carga Docente', view: 'vw_teacher_load' },
-    { id: 3, name: 'Alumnos en Riesgo', view: 'vw_students_at_risk' },
-    { id: 4, name: 'Asistencia Grupal', view: 'vw_attendance_by_group' },
-    { id: 5, name: 'Ranking de Alumnos', view: 'vw_rank_students' },
-  ];
+export default async function Home() {
+  const reports = await getSystemReports();
 
   return (
     <main className="p-10 bg-gray-50 min-h-screen">
